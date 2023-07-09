@@ -17,6 +17,7 @@ import { CartComponent } from './cart/cart.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';  
+import { HomeModule } from './home/home.module';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -47,6 +48,7 @@ const appRoutes: Routes = [
     FormsModule,
     ToastrModule.forRoot(),  
     BrowserAnimationsModule,
+    HomeModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: !isDevMode(),
