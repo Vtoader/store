@@ -1,0 +1,12 @@
+.center-nav-vertical {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.border-bottom-header {
+    border-bottom: 1px solid #007bff;
+}
+.move-right {
+    justify-content: flex-end;
+    display: flex;
+}

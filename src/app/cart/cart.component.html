@@ -1,0 +1,30 @@
+<div class="row text-center">
+    <div class="col-md-4 mx-auto">
+        <h2 class="m-4 text-primary">Cart details</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-8 mx-auto">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Title</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col"></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let product of products; let i = index">
+                <td>{{i}}</td>
+                <td>{{product.title}}</td>
+                <td>{{product.price}}</td>
+                <td><input class="w-25" (change)="changeQuantity()" type="number" id="quantity" name="quantity" min="1" [(ngModel)]="product.quantity"></td>
+                <td><button class="btn btn-danger" (click) = removeProduct(product)>X</button></td>
+              </tr>
+            </tbody>
+        </table>
+        <p>Total: {{totalPrice}}$</p>
+    </div>
+</div>

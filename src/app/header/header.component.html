@@ -1,0 +1,48 @@
+
+  <div class="row border-bottom-header">
+    <div class="col-sm-2">
+        <img src="assets\abstract-network-and-laptop.png" alt="">
+    </div>
+    <div class="col-sm-7">
+      <ul class="nav center-nav-vertical">
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active notebooks" routerLink="/products/notebooks">NOTEBOOKS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mobile" routerLink="/products/mobile">MOBILE</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link tv" routerLink="/products/tv">TV</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-sm-3 move-right">
+      <ul class="nav center-nav-vertical">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">My Account</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item my-account" routerLink="/my-account">Edit Account</a>
+          <a class="dropdown-item add-product" routerLink="/add-product">Add product</a>
+          <a class="dropdown-item" href="#">Log Out</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link dropdown-toggle text-primary" data-toggle="dropdown">Cart({{productService.cartProducts.length}})<img src="assets\shopping-app-icon-4.jpg" width="45" height="45" alt=""></a>
+        <ul class="dropdown-menu text-center" role="menu">
+          <li class="dropdown-item text-primary" *ngFor="let item of productService.cartProducts">{{item.title}} ({{item.quantity}})</li>
+          <div class="dropdown-divider"></div>
+          <button class="btn btn-primary" routerLink="/cart">Show cart details</button>
+        </ul>
+      </li>
+      </ul>
+  </div>
+  
+  </div>
+
+
+
+
+
